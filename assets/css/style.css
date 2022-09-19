@@ -11,6 +11,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior:smooth;
+}
+
 .container {
     padding: 0 24px;
 }
@@ -45,6 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
     display: inline-block;
+    padding-top: 16px;
 }
 
 p, li, span {
@@ -57,7 +62,7 @@ li {
 }
 
 section {
-    margin: 40px 0;
+    margin: 24px 0;
 }
 
 .a-target {
@@ -130,11 +135,11 @@ section {
     background: -webkit-linear-gradient(to left, #414345, #232526);
     background: linear-gradient(to left, #414345, #232526);
     color: white;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
     border-radius: 50%;
-    height: 32px;
-    width: 32px;
+    height: 40px;
+    width: 40px;
     line-height: 1;
     padding: 8px;
 }
@@ -222,4 +227,5 @@ header {
     align-items: center;
     z-index: 2;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    transition: top 0.3s;
 }
