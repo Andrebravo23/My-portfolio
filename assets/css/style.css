@@ -238,7 +238,7 @@ header {
     width: 100vw;
     z-index: 3;
     top: 0;
-    left: -100vh;
+    left: -100vw;
     transition: left 0.5s;
     padding: 24px;
 }
