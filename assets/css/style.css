@@ -56,7 +56,7 @@ p, li, span {
     color: var(--paragraph);
 }
 
-li {
+.working-experience li {
   list-style-type: '- ';
   margin: 8px 0 8px 16px;
 }
@@ -197,6 +197,7 @@ section {
 
 footer {
     text-align: center;
+    padding-top: 16px;
     padding-bottom: 24px;
 }
 
@@ -228,4 +229,55 @@ header {
     z-index: 2;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
     transition: top 0.3s;
+}
+
+.navbar {
+    background-color: white;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    top: 0;
+    left: -100vh;
+    transition: left 0.5s;
+    padding: 24px;
+}
+
+.navbar.show {
+    left: 0;
+}
+
+.noscroll {
+    overflow-y: hidden;
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #eee;
+}
+
+.navbar-header h2 {
+    padding: 0;
+}
+
+.navbar-header span {
+    display: block;
+    padding: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: block;
+    margin: 16px 0;
+}
+
+.navbar a {
+    display: block;
+}
+
+.navbar li {
+    margin: 16px 0;
 }
