@@ -17,15 +17,13 @@ const toggleNav = document.querySelectorAll('.btn-nav');
 
 toggleNav.forEach(btn => {
     btn.addEventListener('click', () => {
-        navbar.classList.toggle('show');
-        body.classList.toggle('noscroll');
+        header.classList.toggle('show');
     });
 });
 
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navbar.classList.remove('show');
-        body.classList.remove('noscroll');
+        header.classList.remove('show');
     });
 });

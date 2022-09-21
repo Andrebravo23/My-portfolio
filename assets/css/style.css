@@ -238,24 +238,38 @@ header {
     transition: top 0.3s;
 }
 
+header::after {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background-color: transparent;
+    content: '';
+    z-index: 2;
+    transition: background 0.5s linear;
+}
+
 .navbar {
     background-color: white;
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100vw;
     z-index: 3;
     top: 0;
     left: -100vw;
-    transition: left 0.5s;
+    transition: left 0.5s ease-in-out;
     padding: 24px;
 }
 
-.navbar.show {
+header.show .navbar {
     left: 0;
 }
 
-.noscroll {
-    overflow-y: hidden;
+header.show::after {
+    background-color:  rgba(0, 0, 0, 0.5);
 }
 
 .navbar-header {
