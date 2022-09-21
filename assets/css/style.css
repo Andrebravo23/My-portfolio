@@ -16,7 +16,7 @@ html {
 }
 
 html, body {
-    font-size: 56.25%;
+    font-size: 62.5%;
 }
 
 h1 {
@@ -391,5 +391,23 @@ header.show::after {
     
     h4 , p, span, li, .btn {
         font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 3.2rem;
+    }
+    
+    h2 {
+        font-size: 2.4rem;
+    }
+    
+    h3 {
+        font-size: 2.2rem;
+    }
+    
+    h4 , p, span, li, .btn {
+        font-size: 1.6rem;
     }
 }
