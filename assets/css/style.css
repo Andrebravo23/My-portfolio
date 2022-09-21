@@ -238,7 +238,7 @@ footer {
     display: flex;
     font-size: 3.2rem;
     justify-content: space-between;
-    width: 50%;
+    width: 80%;
     max-width: 200px;
     margin: 0 auto 8px auto;
 }
@@ -344,6 +344,7 @@ header.show::after {
 
     .project {
         width: 47.5%;
+        margin-bottom: 24px;
     }
 }
 
@@ -352,7 +353,7 @@ header.show::after {
     .container {
         padding: 0 72px;
         max-width: 960px;
-        margin: 0 auto;
+        margin: 24px auto;
     }
 
     main.container {
@@ -409,5 +410,9 @@ header.show::after {
     
     h4 , p, span, li, .btn {
         font-size: 1.6rem;
+    }
+    
+    footer {
+        margin-top: 48px;
     }
 }
