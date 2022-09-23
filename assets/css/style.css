@@ -127,11 +127,16 @@ section {
 }
 
 .project .project-description {
-    padding: 6px 16px 16px 16px;
+    padding: 16px;
+    padding-top: 6px;
 }
 
-.project h3 {
+.project-description h3 {
     margin: 0;
+}
+
+.project-description > p {
+    margin-top: 8px;
 }
 
 .btn-container {
@@ -140,6 +145,8 @@ section {
 }
 
 .btn {
+    position: relative;
+    top: 0;
     padding: 10px 16px;
     cursor: pointer;
     text-decoration: none;
@@ -147,6 +154,12 @@ section {
     border-radius: 10px;
     font-size: 1.25rem;
     height: fit-content;
+    transition: scale 0.5s, top 0.25s;
+}
+
+.btn:hover {
+    scale: 1.05;
+    top: -4px;
 }
 
 .btn-contact {
@@ -176,16 +189,17 @@ section {
     font-weight: bold;
 }
 
-.btn-demo {
-    background: #e52d27;
-    background: -webkit-linear-gradient(to right, #b31217, #e52d27);
-    background: linear-gradient(to right, #b31217, #e52d27);
+.btn-private {
+    background: #606060;
+    background: -webkit-linear-gradient(to right, #606060, #303030);
+    background: linear-gradient(to right, #606060, #303030);
     color: white;
+    cursor: not-allowed;
 }
 
 .btn-git {
-    background-color: #5900e9;
-    background-image: linear-gradient(160deg, #5900e9 0%, #a580d0 100%);
+    background-color: #4900be;
+    background-image: linear-gradient(160deg, #4900be 0%, #7b5f9b 100%);
     color: white;
 }
 
@@ -247,6 +261,14 @@ footer {
 .socials a {
     color: var(--subtle);
     text-decoration: none;
+    position: relative;
+    top: 0;
+    transition: color 0.5s, top 0.5s;
+}
+
+.socials a:hover {
+    color: var(--paragraph);
+    top: -8px;
 }
 
 footer span {
@@ -330,6 +352,29 @@ header.show::after {
 
 .navbar li {
     margin: 16px 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 8px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.stack-tag {
+    background: #16222A;
+    background: -webkit-linear-gradient(to left, #3A6073, #16222A);
+    background: linear-gradient(to left, #3A6073, #16222A);
+    color: white;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.project-stack {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 @media (min-width: 550px) {
