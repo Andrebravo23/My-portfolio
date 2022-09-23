@@ -157,6 +157,7 @@ section {
 }
 
 .btn-nav {
+    cursor: pointer;
     background: #232526;
     background: -webkit-linear-gradient(to left, #414345, #232526);
     background: linear-gradient(to left, #414345, #232526);
