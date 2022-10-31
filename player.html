@@ -18,7 +18,7 @@
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
         let player;
-        let stage;
+        let gameStarted;
 
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('player', {
@@ -35,7 +35,6 @@
 
         function onPlayerReady(event) {
             location.href = "uniwebview://state?value=READY";
-            stage = 0;
         }
 
         function onPlayerError(event) {
@@ -44,26 +43,27 @@
 
         function onPlayerStateChange(event) {
             location.href = "uniwebview://playerState?value=" + event.data;
-            if (event.data == 2) {
-                if (stage == 2) {
-                    location.href = "uniwebview://state?value=LOADED";
-                    stage = 3;
-                } else {
+            if (gameStarted) {
+                if (event.data == 2) {
                     location.href = "uniwebview://state?value=PAUSED";
                 }
-            } else if (event.data == 1 && stage == 1) {
-                location.href = "uniwebview://state?value=BUFFERING";
-                stage = 2;
+            } else {
+                if (event.data == 1) {
+                    location.href = "uniwebview://state?value=BUFFERING";
+                } else if (event.data == 2) {
+                    location.href = "uniwebview://state?value=LOADED";
+                }
             }
         }
 
         function loadById(id){
             player.loadVideoById(id);
-            stage = 1;
+            gameStarted = false;
         }
 
         function play(){
             player.playVideo();
+            if (!gameStarted) gameStarted = true;
         }
 
         function pause(){
