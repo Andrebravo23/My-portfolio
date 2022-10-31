@@ -43,6 +43,7 @@
         }
 
         function onPlayerStateChange(event) {
+            location.href = "uniwebview://playerState?value=" + event.data;
             if (event.data == 2) {
                 if (stage == 2) {
                     location.href = "uniwebview://state?value=LOADED";
